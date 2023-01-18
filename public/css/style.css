@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.nom{
+    font-family: 'Rouge Script', cursive;
+    font-weight:600;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+header {
+  background: #f4f4f4;
+  text-align: center;
+  padding: 2em;
+}
+
+header img {
+  max-width: 96px;
+}
+
+header h1 {
+  font-size: 2.5em;
+}
+
+/* .container{
+    background: rgb(195,144,96);
+    background: linear-gradient(90deg, rgba(195,144,96,1) 20%, rgba(231,207,185,1) 51%, rgba(230,182,138,1) 85%);
+} */
+
+h1, h2 {
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+.btn-css{
+    background: #f76c6c !important;
+}
+
+.new-member-form {
+  margin: 2em 0 4em 0;
+  text-align: center;
+}
+
+.member-item {
+  padding: 0.25em 0;
+}
+
+.card-group{
+    padding: 50px;
+}
+
+.parchemin{
+    padding: 150px;
+}
+
+.container-fluid{
+    background-image: url("../img/parchemin.webp");
+    background-repeat: round;
+    background-size: cover;
+    object-fit: cover;
+    object-position: 10% 50%;
+}
+
+footer {
+  margin-top: 2em;
+  text-align: center;
+  color: #fff;
+  background: #f76c6c;
+  padding: 0.25em 0;
+}
