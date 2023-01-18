@@ -3,32 +3,39 @@
 {% block title %}Hello HomeController!{% endblock %}
 
 {% block body %}
-    <h2 class=" mt-4">Ajouter un(e) Argonaute</h2>
+    <h2 class="mt-4">Ajouter un(e) Argonaute</h2>
 
     {{ form_start(form) }}
-        {{ form_errors(form) }}
-            <div class="container shadow-lg mt-5 mb-5">
+    {{ form_errors(form) }}
+        <div class="container shadow-lg mt-5 mb-5">
+
+            <div class="row d-flex justify-content-lg-center">
+
+                <div class="col-4 mb-4 mt-4">
+                    {{ form_row(form.nom, { 'label': 'Nom du membre de l\'équipage' }) }}
+                </div>
+                <div class="col-4 mb-4 mt-4">
+                    {{ form_row(form.age, { 'label': 'Age du membre de l\'équipage' }) }}
+                </div>
                 <div class="row d-flex justify-content-lg-center">
-                    <div class="col-4 mb-4 mt-4">
-                        {{ form_row(form.nom, { 'label': 'Nom du membre de l\'équipage' }) }}
-                    </div>
-                    <div class="col-4 mb-4 mt-4">
-                        {{ form_row(form.age, { 'label': 'Age du membre de l\'équipage' }) }}
-                    </div>
-                    <div class="row d-flex justify-content-lg-center">
-                        <div class="col-4 mt-4 mb-4">
-                            {{ form_row(form.submit, { 'label': 'Envoyer' }) }}
-                        </div>
+                    <div class="col-4 mt-4 mb-4">
+                        {{ form_row(form.submit, { 'label': 'Envoyer' }) }}
                     </div>
                 </div>
+
             </div>
+
+        </div>
     {{ form_end(form) }}
   
   <!-- Member list -->
   <h2>Membres de l'équipage</h2>
   <section class="member-list">
-        <div class="container-fluid">            
+
+        <div class="container-fluid"> 
+
             <div class="row parchemin">
+
                 <h2 class="nom fs-1 text-center ">{{ membres | length }} Membres d'équipage </h2>
                 <div class="col-12 fs-2 card-group mt-5 text-center">
                     {% for membre in membres %}
@@ -37,9 +44,11 @@
                     </div>
                     {% endfor %}    
                 </div>
+                
             </div>
+
         </div>
-    
+
   </section>
 </main>
 {% endblock %}
